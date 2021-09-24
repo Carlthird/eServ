@@ -80,7 +80,7 @@ public class file {
     }
 
     static String contType(String p) {
-        String types[] = {"text/plain", "text/html", "text/css", "image/png","image/jpeg","image/gif","application/javascript"};
+        String types[] = {"text/plain", "text/html", "text/css", "image/png","image/jpeg","image/gif","application/javascript","video/mp4"};
         String ext = p.substring(p.length() - 4);
         if ("html".equals(ext)) return types[1]+comps[0];
         if (".css".equals(ext)) return types[2]+comps[0];
@@ -88,6 +88,7 @@ public class file {
         if (".js".equals(ext.substring(1))) return types[6]+comps[0];
         if ("jpeg".equals(ext)) return types[4] + comps[0];
         if (".gif".equals(ext)) return types[5]+comps[0];
+        if (".mp4".equals(ext)) return types[7]+comps[0];
         return types[0] + comps[0];
     }
 }
