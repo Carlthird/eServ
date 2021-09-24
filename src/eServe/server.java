@@ -42,7 +42,7 @@ public class server {
                 StringBuilder requestBuilder = new StringBuilder(); // get request
                 String line;
                 while (!(line = reader.readLine()).isBlank()) {
-                    requestBuilder.append(line + "\r\n");
+                    requestBuilder.append(line).append("\r\n");
                 }
                 String request = requestBuilder.toString();
 
