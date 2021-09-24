@@ -45,11 +45,12 @@ public class file {
         }
         String head = "";
         if (file.exists()) { //check for file
+            String CT = contType(file.getPath());
             switch (method) {
                 case "GET":
                     // Code for 'GET' method
                     data = Files.readAllBytes(Paths.get(file.getPath()));
-                    head = ver+comps[1]+comps[0]+comps[3]+contType(file.getPath())+comps[4]+Integer.toString(data.length)+comps[0]+comps[0];
+                    head = ver+comps[1]+comps[0]+comps[3]+CT+comps[4]+Integer.toString(data.length)+comps[0]+comps[0];
                     break;
                 case "POST":
                     // Code for 'POST' method
@@ -61,7 +62,7 @@ public class file {
                     break;
                 case "HEAD":
                     // Code for 'HEAD' method
-                    head = ver+comps[1]+comps[0]+comps[3]+contType(file.getPath())+comps[4]+Integer.toString(data.length)+comps[0]+comps[0]; //only header
+                    head = ver+comps[1]+comps[0]+comps[3]+CT+comps[4]+Integer.toString(data.length)+comps[0]+comps[0]; //only header
                     break;
                 default:
                     head = ver+comps[6]+comps[0]+comps[0]; // not implemented
