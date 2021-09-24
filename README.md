@@ -1,14 +1,14 @@
 ## eServ - A Customizable HTTP Server
 
-    I found myself in need of a customizable java http server and this is what I ended up with.
+I found myself in need of a customizable java http server and this is what I ended up with.
 I thought it could be useful for other people so I've made the repo public.
 
 ### Basic Usage
 
-    As this is a java library you only need to download the .jar file and include it as a 
+As this is a java library you only need to download the .jar file and include it as a 
 library if you want to use it in it's most basic form.
 
-    It's important to note that while the .jar file and NBProject are called eServ, the
+It's important to note that while the .jar file and NBProject are called eServ, the
 library package name is 'eServe'
 
 To start the server, simply run:
@@ -20,16 +20,16 @@ on, and 'verb' is a boolean that enables (true) or disables (false) verbose outp
 
 ### Modifying the Server
 
-    Of course, the code is designed to be modified. The source code is in the form of a 
+Of course, the code is designed to be modified. The source code is in the form of a 
 NetBeans Java Project with Ant.
 
-    Most of the modifications you'll likely make are going to be in the 'file' class, however 
+Most of the modifications you'll likely make are going to be in the 'file' class, however 
 there are some commented out sections of the 'server' class, that enable some variables that
 aren't used in the default form of the server.
 
 #### Changing Response to Request Types
 
-    In the 'file' class, there is a switch block that responds to different http requests. Here
+In the 'file' class, there is a switch block that responds to different http requests. Here
 is where you would alter existing response logic, add new http response logic, or create your 
 own response logic, say if you need to host a site that sends a strange data type back to the
 server.
@@ -72,10 +72,10 @@ public static String comps[] = {
 They are concatenated together to create the text part of the HTTP response.
 
 #### Changing Response to Content Type
-    There are simpler ways to handle content-type in java, but this way gives much more flexibility
+There are simpler ways to handle content-type in java, but this way gives much more flexibility
 when an uncommon use-case must be implemented.
 
-    Simply use the if statements and return a string based on the last 4 characters of a file path
+Simply use the if statements and return a string based on the last 4 characters of a file path
 to change or add content type responses
 ````
 static String contType(String p) {
@@ -93,7 +93,7 @@ static String contType(String p) {
 
 ### Submitting Pull Requests
 
-    I won't likely have much time to go over pull requests and decide if they should be implemented, 
+I won't likely have much time to go over pull requests and decide if they should be implemented, 
 but if I see a modification I think is really impressive/useful, then I might make time to check 
 over it. Needless to say, if the pull requests don't have good descriptions, I won't give them a 
 moment of my time.
